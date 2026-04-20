@@ -55,7 +55,7 @@ int main(){
                 }
         }
     }
-    
+    printf("\n");
     printf("RECOVERED ");
     for(int k = 0; k < N; k++){
         printf("%d ", array[k]);
