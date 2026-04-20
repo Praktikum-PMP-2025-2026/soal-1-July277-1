@@ -57,10 +57,10 @@ int main(){
     }
     printf("\n");
     printf("RECOVERED ");
-    for(int k = 0; k < N; k++){
+    for(int k = 0; k < N-1; k++){
         printf("%d ", array[k]);
     }
-    printf("\n");
+    printf("%d", array[N]);
     for(int z = 0; z < N; z++){
         max = max + array[z];
     }
