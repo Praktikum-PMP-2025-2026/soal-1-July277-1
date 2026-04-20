@@ -45,7 +45,12 @@ int main(){
                 temp4 = temp2;
             
                 if(temp3 != -1 && temp4 != -1){
-                    array[j] = (temp3 + temp4) / 2;
+                    int total = (temp3 + temp4) / 2;
+                    if(total < 0 && (temp3 + temp4) % 2 == 1 ){
+                        array[j] = total -1;
+                    } else{
+                        array[j] = total;
+                    }
                 } else if (temp3 != -1 && array[j+1] == -1){
                     array[j] = temp3;
                 } else if (array[j-1] == -1 && temp4 != -1){
@@ -56,10 +61,12 @@ int main(){
         }
     }
     printf("RECOVERED ");
-    for(int k = 0; k < N-1; k++){
-        printf("%d ", array[k]);
+    for(int k = 0; k < N; k++){
+        if(k == N-1){
+            printf("%d\n", array[k]);
+        }else {printf("%d ", array[k]);}
     }
-    printf("%d\n", array[N]);
+    
     for(int z = 0; z < N; z++){
         max = max + array[z];
     }
