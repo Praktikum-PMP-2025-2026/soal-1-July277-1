@@ -14,7 +14,6 @@ int main(){
     int array[N];
     int temp1;
     int temp2;
-    int x = -1000;
     int temp3;
     int temp4;
     int token1 = 0;
@@ -63,21 +62,19 @@ int main(){
                 } else if (temp3 == -1 && temp4 == -1){
                     array[j] = 0;
                 }
-                for(int z = 0; z < N; z++){
-                max = max + array[z];
-                }
-                if(max > x){
-                    x = max;
-                }
-            }
         }
+    }
     printf("RECOVERED ");
     for(int k = 0; k < N; k++){
         if(k == N-1){
             printf("%d\n", array[k]);
         }else {printf("%d ", array[k]);}
     }
-    printf("MAX_SUM %d\n", x);
+    
+    for(int z = 0; z < N; z++){
+        max = max + array[z];
+    }
+    printf("MAX_SUM %d\n", max);
 
     return 0;
 
