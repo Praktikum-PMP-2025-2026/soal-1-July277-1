@@ -51,9 +51,9 @@ int main(){
                     } else{
                         array[j] = total;
                     }
-                } else if (temp3 != -1 && array[j+1] == -1){
+                } else if (temp3 != -1 && temp4 == -1){
                     array[j] = temp3;
-                } else if (array[j-1] == -1 && temp4 != -1){
+                } else if (temp3 == -1 && temp4 != -1){
                     array[j] = temp4;
                 } else if (temp3 == -1 && temp4 == -1){
                     array[j] = 0;
