@@ -36,9 +36,14 @@ int main(){
                     temp4 = -1;
                 }
             }
+            if(temp1 == 0){
+                temp1 = -1;
+            }
+            if(temp2 == 0){
+                temp2 = -1;
+            }
                 temp3 = temp1;
-                temp4 = temp2;
-            
+                temp4 = temp2;            
                 if(temp3 != -1 && temp4 != -1){
                     int total = (temp3 + temp4) / 2;
                     if(total < 0 && (temp3 + temp4) % 2 == 1 ){
