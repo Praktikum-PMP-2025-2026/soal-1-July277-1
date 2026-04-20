@@ -12,7 +12,6 @@ int main(){
     int max = 0;
     scanf("%d", &N);
     int array[N];
-    int array2[N];
     int temp1;
     int temp2;
     int temp3;
@@ -21,10 +20,6 @@ int main(){
     for(int i = 0; i < N; i++){
          scanf("%d", &array[i]);
         }
-    for(int a = 0; a < N; a++){
-        array2[a] = array[a];
-        }
-
     for(int j = 1; j < N - 1; j++){
         if(array[j] == -1){
             for(int a = 0; a < j; a++){
