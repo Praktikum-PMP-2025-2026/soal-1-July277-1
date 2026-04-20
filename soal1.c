@@ -20,7 +20,7 @@ int main(){
     for(int i = 0; i < N; i++){
          scanf("%d", &array[i]);
         }
-    for(int j = 1; j < N - 1; j++){
+    for(int j; j < N ; j++){
         if(array[j] == -1){
             for(int a = 0; a < j; a++){
                 if(array[a] != -1){
@@ -32,7 +32,7 @@ int main(){
             for(int b = N; b > j; b--){
                 if(array[b] != -1){
                     temp2 = array[b];
-                } else if(array[N] == -1){
+                } else if(array[N-1] == -1){
                     temp4 = -1;
                 }
             }
