@@ -16,6 +16,8 @@ int main(){
     int temp2;
     int temp3;
     int temp4;
+    int token1 = 0;
+    int token2 = 0;
 
     for(int i = 0; i < N; i++){
          scanf("%d", &array[i]);
@@ -25,25 +27,29 @@ int main(){
             for(int a = 0; a < j; a++){
                 if(array[a] != -1){
                     temp1 = array[a];
+                    token1 = 1;
                 }else if(array[0] == -1){
                     temp3 = -1;
                 }
             }
-            for(int b = N; b > j; b--){
+            for(int b = N-1; b > j; b--){
                 if(array[b] != -1){
                     temp2 = array[b];
+                    token2 = 1;
                 } else if(array[N-1] == -1){
                     temp4 = -1;
                 }
             }
-            if(temp1 == 0){
+            if(token1 == 0){
                 temp1 = -1;
             }
-            if(temp2 == 0){
+            if(token2 == 0){
                 temp2 = -1;
             }
                 temp3 = temp1;
-                temp4 = temp2;            
+                temp4 = temp2;
+                printf("%d %d\n", temp3, temp4);
+            
                 if(temp3 != -1 && temp4 != -1){
                     int total = (temp3 + temp4) / 2;
                     if(total < 0 && (temp3 + temp4) % 2 == 1 ){
