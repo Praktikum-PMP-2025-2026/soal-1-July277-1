@@ -50,8 +50,8 @@ int main(){
                 temp4 = temp2;            
                 if(temp3 != -1 && temp4 != -1){
                     int total = (temp3 + temp4) / 2;
-                    if(total < 0 && (temp3 + temp4) % 2 == 1 ){
-                        array[j] = total -1;
+                    if((total < 0) && ((temp3 + temp4) % 2 == -1)){
+                        array[j] = total - 1;
                     } else{
                         array[j] = total;
                     }
@@ -78,4 +78,4 @@ int main(){
 
     return 0;
 
-}
+}5 -5 -1 -2 -1 -4
